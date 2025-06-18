@@ -21,7 +21,11 @@ namespace mcqTestBackend.Service
             var claims = new[]
              {
                 new Claim(ClaimTypes.Name, user.Email),
-                new Claim(ClaimTypes.Role, role)
+                new Claim(ClaimTypes.Role, role),
+                new Claim("role", user.Email),
+                new Claim("email", role),
+                new Claim("firstName", user.FirstName),
+                new Claim("lastName", user.LastName),
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]!));

@@ -11,6 +11,7 @@ namespace mcqTestBackend.Data
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<AnonymousSpPermission> AnonymousSpPermissions { get; set; }
 
     }
 }
